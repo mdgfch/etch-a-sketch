@@ -15,7 +15,9 @@ function setGrid() {
 }
 
 function setDimensions() {
-    input = prompt("How many squares would you like per side?")
+    do {
+        input = prompt("Enter a value between 1 and 100");
+    } while (input < 1 || input > 100);
     length = 800 / input;
     document.getElementById('container').style.gridTemplateColumns = `repeat(${input}, ${length}px)`;
     document.getElementById('container').style.gridAutoRows = `${length}px`;
