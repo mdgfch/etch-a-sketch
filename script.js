@@ -13,17 +13,6 @@ function setGrid() {
         }    
     };
 }
-setGrid();
-paintCells();
-
-const size = document.getElementById("sizebtn");
-size.style.margin = "12px";
-size.addEventListener("click", function(){
-    setDimensions();
-    replaceGrid();
-    setGrid();
-    paintCells();
-});
 
 function setDimensions() {
     input = prompt("How many squares would you like per side?")
@@ -48,5 +37,17 @@ function paintCells() {
         });
     })
 };
+
+setGrid();
+paintCells();
+
+const size = document.getElementById("sizebtn");
+size.style.margin = "12px";
+size.addEventListener("click", function(){
+    setDimensions();
+    replaceGrid();
+    setGrid();
+    paintCells();
+});
 
 
